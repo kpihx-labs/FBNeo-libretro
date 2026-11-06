@@ -20788,6 +20788,38 @@ struct BurnDriver BurnDrvMslug4fd = {
 	0x1000,	304, 224, 4, 3
 };
 
+// Metal Slug 4 (NeoRAGEx fully decrypted legacy layout)
+
+static struct BurnRomInfo mslug4nrxRomDesc[] = {
+	{ "263-p1d.bin", 0x100000, 0x4d7e6624, 1 | BRF_ESS | BRF_PRG },
+	{ "263-p2d.bin", 0x400000, 0xfdb7aed8, 1 | BRF_ESS | BRF_PRG },
+	{ "263-s1d.bin", 0x020000, 0xa9446774, 2 | BRF_GRA },
+	{ "263-c1d.bin", 0x800000, 0x361ddda6, 3 | BRF_GRA },
+	{ "263-c2d.bin", 0x800000, 0x15d192c4, 3 | BRF_GRA },
+	{ "263-c3d.bin", 0x800000, 0x63fb79ff, 3 | BRF_GRA },
+	{ "263-c4d.bin", 0x800000, 0xe8623126, 3 | BRF_GRA },
+	{ "263-c5d.bin", 0x400000, 0x3348dc5d, 3 | BRF_GRA },
+	{ "263-c6d.bin", 0x400000, 0xd90fc1a0, 3 | BRF_GRA },
+	{ "263-m1d.bin", 0x020000, 0xee1e5580, 4 | BRF_ESS | BRF_PRG },
+	{ "263-v1d.bin", 0x400000, 0xc1b2af81, 5 | BRF_SND },
+	{ "263-v2d.bin", 0x400000, 0xcbbdc6fa, 5 | BRF_SND },
+	{ "263-v3d.bin", 0x400000, 0xc4f1a3cc, 5 | BRF_SND },
+	{ "263-v4d.bin", 0x400000, 0x40126a0a, 5 | BRF_SND },
+};
+
+STDROMPICKEXT(mslug4nrx, mslug4nrx, neogeo)
+STD_ROM_FN(mslug4nrx)
+
+struct BurnDriver BurnDrvMslug4nrx = {
+	"mslug4nrx", "mslug4", "neogeo", NULL, "2002",
+	"Metal Slug 4 (NeoRAGEx fully decrypted legacy layout)\0", NULL, "Mega / Noise Factory / Playmore", "Neo Geo MVS",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE, 2, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_SNK_NEOGEO, GBF_RUNGUN, FBF_MSLUG,
+	NULL, mslug4nrxRomInfo, mslug4nrxRomName, NULL, NULL, NULL, NULL, neogeoInputInfo, neogeoDIPInfo,
+	NeoInit, NeoExit, NeoFrame, NeoRender, NeoScan, &NeoRecalcPalette,
+	0x1000, 304, 224, 4, 3
+};
+
 
 // Metal Slug 4 (Legendary Unlimited Fire v7.0, Hack)
 // Modified by AKS & Sakura
