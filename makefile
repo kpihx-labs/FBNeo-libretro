@@ -132,4 +132,8 @@ vc18: FORCE
 pi: FORCE
 	@$(MAKE) -s -f makefile.pi
 
+.PHONY: push
+push:
+	git push github master
+
 FORCE:
