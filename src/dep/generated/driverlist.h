@@ -15566,6 +15566,7 @@ DRV		BurnDrvMs41v2;
 DRV		BurnDrvMslug4a;
 DRV		BurnDrvMslug4c;
 DRV		BurnDrvMslug4fd;
+DRV		BurnDrvMslug4nrx;
 DRV		BurnDrvMslug4ki;
 DRV		BurnDrvMslug4lq;
 DRV		BurnDrvMslug4lw;
@@ -45446,6 +45447,7 @@ static struct BurnDriver* pDriver[] = {
 	&BurnDrvMslug4a,			// Metal Slug 4 (20th Anniversary, Hack)
 	&BurnDrvMslug4c,			// Metal Slug 4 (Enemy Remix, Hack)
 	&BurnDrvMslug4fd,			// Metal Slug 4 (Fully Decrypted)
+	&BurnDrvMslug4nrx,			// Metal Slug 4 (NeoRAGEx fully decrypted legacy layout)
 	&BurnDrvMslug4ki,			// Metal Slug 4 (Komorebi, Hack)
 	&BurnDrvMslug4lq,			// Metal Slug 4 (Last Bullet Remix - Without body armor, Hack)
 	&BurnDrvMslug4lw,			// Metal Slug 4 (Last Bullet Remix, Hack)
